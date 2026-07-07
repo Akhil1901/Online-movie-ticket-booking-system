@@ -8,6 +8,11 @@ from app.extensions.cors import init_cors
 # Import Blueprints
 from app.routes.auth import auth_bp
 from app.routes.cities import cities_bp
+from app.routes.areas import areas_bp
+from app.routes.theatres import theatres_bp
+from app.routes.screens import screens_bp
+from app.routes.movies import movies_bp
+from app.routes.shows import shows_bp
 
 
 def create_app():
@@ -29,6 +34,11 @@ def create_app():
     # ===============================
     from app.models.user import User
     from app.models.city import City
+    from app.models.area import Area
+    from app.models.theatre import Theatre
+    from app.models.screen import Screen
+    from app.models.movie import Movie
+    from app.models.show import Show
 
     print("5. Initializing Flask-Migrate")
     migrate.init_app(app, db)
@@ -39,6 +49,11 @@ def create_app():
     print("7. Registering Blueprints")
     app.register_blueprint(auth_bp)
     app.register_blueprint(cities_bp)
+    app.register_blueprint(areas_bp)
+    app.register_blueprint(theatres_bp)
+    app.register_blueprint(screens_bp)
+    app.register_blueprint(movies_bp)
+    app.register_blueprint(shows_bp)
 
     print("8. Registering Home Route")
 
