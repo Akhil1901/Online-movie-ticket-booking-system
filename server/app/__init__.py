@@ -14,6 +14,7 @@ from app.routes.screens import screens_bp
 from app.routes.movies import movies_bp
 from app.routes.shows import shows_bp
 from app.routes.seats import seats_bp
+from app.routes.bookings import bookings_bp
 
 
 def create_app():
@@ -41,6 +42,7 @@ def create_app():
     from app.models.movie import Movie
     from app.models.show import Show
     from app.models.seat import Seat
+    from app.models.booking import Booking
 
     print("5. Initializing Flask-Migrate")
     migrate.init_app(app, db)
@@ -57,6 +59,7 @@ def create_app():
     app.register_blueprint(movies_bp)
     app.register_blueprint(shows_bp)
     app.register_blueprint(seats_bp)
+    app.register_blueprint(bookings_bp)
 
     print("8. Registering Home Route")
 
