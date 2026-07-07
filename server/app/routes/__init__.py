@@ -9,6 +9,7 @@ from .theatres import theatres_bp
 from .screens import screens_bp
 from .movies import movies_bp
 from .shows import shows_bp
+from .seats import seats_bp
 
 __all__ = [
     "auth_bp",
@@ -17,5 +18,6 @@ __all__ = [
     "theatres_bp",
     "screens_bp",
     "movies_bp",
-    "shows_bp"
+    "shows_bp",
+    "seats_bp"
 ]

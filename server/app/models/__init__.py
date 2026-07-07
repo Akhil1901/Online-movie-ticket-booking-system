@@ -5,6 +5,7 @@ from app.models.theatre import Theatre
 from app.models.screen import Screen
 from app.models.movie import Movie
 from app.models.show import Show
+from app.models.seat import Seat
 
 __all__ = [
     "User",
@@ -13,5 +14,6 @@ __all__ = [
     "Theatre",
     "Screen",
     "Movie",
-    "Show"
+    "Show",
+    "Seat"
 ]
